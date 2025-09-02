@@ -93,7 +93,7 @@ class BenchmarkPlotter:
 
         ta = 200
         self._setup_style(fontsize=16, grid=True)
-        fig, ax = plt.subplots(figsize=(5.5, 4))
+        fig, ax = plt.subplots(figsize=(6, 4.5))
         colors = plt.cm.tab10.colors  # Use tab10 colormap for better consistency
         
         ALL_dfs = []
@@ -188,6 +188,9 @@ class BenchmarkPlotter:
             handlelength=1
         )
         
+        # Add title showing systems being compared
+        ax.set_title(f"TTS Comparison for Systems {', '.join(map(str, systems))}")
+        
         ax.set_xlabel(r"$N$")
         ax.set_ylabel(r"$\mathrm{TTS}_{\rm 99}$ [ms]")
         ax.set_yscale("log")
@@ -201,7 +204,7 @@ class BenchmarkPlotter:
     def plot_tts_horizontal_legend(self, systems: List[int] = [1,2,5,6,7], file_limit: int = 20, num_reps=0):
         """Plot time-to-solution comparisons for multiple systems with horizontal legend above."""
         self._setup_style(fontsize=16, grid=True)
-        fig, ax = plt.subplots(figsize=(5, 4))
+        fig, ax = plt.subplots(figsize=(5.5, 4.5))
         colors = plt.cm.tab10.colors  # Use tab10 colormap for better consistency
         
         ALL_dfs = []
@@ -286,6 +289,9 @@ class BenchmarkPlotter:
                     va='bottom'
                 )
 
+        # Add title
+        ax.set_title(f"TTS Comparison for Systems {', '.join(map(str, systems))}")
+        
         # Place legend above the plot in one row
         ax.legend(
             bbox_to_anchor=(0., 1.02, 1., .102),
@@ -326,7 +332,7 @@ class BenchmarkPlotter:
 
 
         for system in  systems:
-            fig, ax = plt.subplots(1, 1, figsize=(4, 4))
+            fig, ax = plt.subplots(1, 1, figsize=(4.5, 4.5))
 
             data = {tp: {t: [] for t in timepoints_of_interest} for tp in topologies}
 
@@ -351,7 +357,8 @@ class BenchmarkPlotter:
                         marker=markers[topology]
                     )
 
-            #ax.set_title(rf'$\widehat K_{system}$')
+            # Add descriptive title
+            ax.set_title(f"Success Probability for System {system}")
             ax.set_xlabel(r'Annealing Time [$\mu$s]')
             ax.set_yscale('log')
             ax.grid(True)
@@ -374,7 +381,7 @@ class BenchmarkPlotter:
         colors = ["r", "g", "b", "c", "m", "y", "k"]
         markers = ["o", "s", "^", "D", "v", "<", ">"]
         for j,system in enumerate([system]):
-            fig, ax = plt.subplots(1,1,figsize=(4, 4))
+            fig, ax = plt.subplots(1,1,figsize=(4.5, 4.5))
 
             i = instance.BenchmarkInstance(system,number_time_points=timepoints)
 
@@ -390,6 +397,9 @@ class BenchmarkPlotter:
             psi_0.dims = [[2]*dim, [1]]  # Naprawa błędu wymiarów
 
             baseline = qp.mesolve(H_qp, psi_0, times, e_ops=[P_00, P_11]).expect
+
+            # Add title showing system and solver being used
+            ax.set_title(f"System {system} Dynamics ({solver})\n{timepoints} timepoints")
 
             ax.plot(times, baseline[0], "k--")
             if dim== 2:
