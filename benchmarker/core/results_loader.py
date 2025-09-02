@@ -127,7 +127,6 @@ class ResultsLoader:
             df_dict['num_var'].append(len(s.variables))
             sampleset = s.to_pandas_dataframe()
             sampleset['energy'] = round(sampleset['energy'],14)
-            print(s.first.energy)
             if len(sampleset[sampleset.energy== 0]) == 0:
                 success_rate = 0.0
             else:
@@ -135,7 +134,6 @@ class ResultsLoader:
             success_rate /= sampleset['num_occurrences'].sum()
             
             df_dict['success'].append(success_rate)
-            print(file_counter)
         
         df = pd.DataFrame.from_dict(df_dict)
         if df.empty:
