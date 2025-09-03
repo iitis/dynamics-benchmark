@@ -233,11 +233,9 @@ class ResultsLoader:
             return pd.DataFrame()
             
         df_dict = defaultdict(list)
-        file_counter = 0
+        file_counter = defaultdict(int)
 
         for file_path in path.glob('*.json'):
-            if file_counter >= file_limit:
-                break
                 
             try:
                 with file_path.open('r') as f:
@@ -254,12 +252,13 @@ class ResultsLoader:
                 annealing_time = sample_set.info['timing']['qpu_anneal_time_per_sample']
                 if not ta == annealing_time:
                     continue
-            
-            file_counter += 1
-            
-            # Extract metadata from filename
+                    
             precision = int(re.findall(r'(?<=precision_)\d+', file_path.name)[0])
             timepoints = int(re.findall(r'(?<=timepoints_)\d+', file_path.name)[0])
+            
+            if file_counter[(system, timepoints)] >= file_limit:
+                continue
+            file_counter[(system, timepoints)] += 1
             
             # Process sample set data
             df = sample_set.to_pandas_dataframe()

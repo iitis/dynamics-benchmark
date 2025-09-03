@@ -1,0 +1,303 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 16,
+  "num_rows": 27,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        43177
+      ],
+      [
+        10409
+      ],
+      [
+        41125
+      ],
+      [
+        43689
+      ],
+      [
+        39049
+      ],
+      [
+        26793
+      ],
+      [
+        34969
+      ],
+      [
+        41129
+      ],
+      [
+        26665
+      ],
+      [
+        42145
+      ],
+      [
+        42153
+      ],
+      [
+        10345
+      ],
+      [
+        34985
+      ],
+      [
+        43690
+      ],
+      [
+        39081
+      ],
+      [
+        24613
+      ],
+      [
+        37033
+      ],
+      [
+        6217
+      ],
+      [
+        22537
+      ],
+      [
+        43179
+      ],
+      [
+        33945
+      ],
+      [
+        32917
+      ],
+      [
+        41641
+      ],
+      [
+        37001
+      ],
+      [
+        8357
+      ],
+      [
+        22697
+      ],
+      [
+        4165
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      27,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1.5
+      ],
+      "data_type": "float64",
+      "shape": [
+        27
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        831,
+        5,
+        19,
+        8,
+        12,
+        11,
+        10,
+        6,
+        8,
+        15,
+        22,
+        6,
+        10,
+        4,
+        21,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data_type": "int64",
+      "shape": [
+        27
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        27
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 212460.0,
+      "qpu_anneal_time_per_sample": 100.0,
+      "qpu_readout_time_per_sample": 51.89,
+      "qpu_access_time": 247048.0,
+      "qpu_access_overhead_time": 10335.0,
+      "qpu_programming_time": 34588.0,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 58.0,
+      "post_processing_overhead_time": 58.0
+    },
+    "problem_id": "b96dc13b-6695-45f6-b3da-529fe2bf4ee3",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          645
+        ],
+        "0": [
+          4251
+        ],
+        "8": [
+          633
+        ],
+        "9": [
+          4262
+        ],
+        "3": [
+          2772
+        ],
+        "2": [
+          217
+        ],
+        "10": [
+          2761
+        ],
+        "11": [
+          229
+        ],
+        "5": [
+          4532
+        ],
+        "4": [
+          1654
+        ],
+        "12": [
+          1643
+        ],
+        "13": [
+          4520
+        ],
+        "7": [
+          4076
+        ],
+        "6": [
+          4064
+        ],
+        "14": [
+          1640
+        ],
+        "15": [
+          1652
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.676797729304283
+    }
+  }
+}

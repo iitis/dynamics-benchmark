@@ -78,8 +78,8 @@ class Instance:
         """
         if solver_id == "5.4":
             dw_sampler = EmbeddingComposite(DWaveSampler( solver="Advantage_system5.4", region="eu-central-1", ))
-        elif solver_id == "1.4": # zephyr
-            dw_sampler = EmbeddingComposite(DWaveSampler( solver="Advantage2_system1.4"))
+        elif solver_id == "1.6": # zephyr
+            dw_sampler = EmbeddingComposite(DWaveSampler( solver="Advantage2_system1.6"))
         elif solver_id == "6.4": 
             dw_sampler = EmbeddingComposite(DWaveSampler(solver="Advantage_system6.4"))
         elif solver_id == "neal":
