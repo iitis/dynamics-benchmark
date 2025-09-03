@@ -10,12 +10,13 @@ test_cases=[
         system=system,
         sampler=sampler,
         timepoints=timepoints,
-        ta=200,
+        ta=tas,
         num_reps=1000
     ) 
-    for system in [1,2,5,6,7] 
-    for timepoints in range(6,15) 
-    for sampler in ['6.4'] 
+    for system in [1,3] 
+    for tas in [10,100,200,500]
+    for timepoints in range(2,4) 
+    for sampler in ['1.6'] 
     for _ in range(5)
 ]
 
@@ -26,5 +27,5 @@ runner = BenchmarkRunner(test_cases=test_cases)
 results = runner.run_and_save()
 
 
-BenchmarkPlotter().plot_tts(num_reps=1000, file_limit=20)
+BenchmarkPlotter().plot_tts(num_reps=1000, file_limit=5)
 print("Done")

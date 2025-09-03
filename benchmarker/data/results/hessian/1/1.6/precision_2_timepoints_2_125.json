@@ -1,0 +1,285 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 16,
+  "num_rows": 24,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        39593
+      ],
+      [
+        47787
+      ],
+      [
+        6825
+      ],
+      [
+        23205
+      ],
+      [
+        39065
+      ],
+      [
+        39337
+      ],
+      [
+        37481
+      ],
+      [
+        23209
+      ],
+      [
+        39305
+      ],
+      [
+        43689
+      ],
+      [
+        38441
+      ],
+      [
+        47785
+      ],
+      [
+        38569
+      ],
+      [
+        6817
+      ],
+      [
+        39081
+      ],
+      [
+        37545
+      ],
+      [
+        43690
+      ],
+      [
+        22677
+      ],
+      [
+        10922
+      ],
+      [
+        5673
+      ],
+      [
+        39561
+      ],
+      [
+        41642
+      ],
+      [
+        15017
+      ],
+      [
+        39577
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      24,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data_type": "float64",
+      "shape": [
+        24
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        858,
+        3,
+        6,
+        11,
+        14,
+        13,
+        11,
+        6,
+        10,
+        8,
+        5,
+        5,
+        16,
+        4,
+        11,
+        6,
+        6,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data_type": "int64",
+      "shape": [
+        24
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        24
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 213460.0,
+      "qpu_anneal_time_per_sample": 100.0,
+      "qpu_readout_time_per_sample": 52.89,
+      "qpu_access_time": 248048.0,
+      "qpu_access_overhead_time": 602.0,
+      "qpu_programming_time": 34588.0,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 1.0,
+      "post_processing_overhead_time": 1.0
+    },
+    "problem_id": "e25f1cca-7490-4f7b-9e52-11e383262c11",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          2806
+        ],
+        "0": [
+          2053
+        ],
+        "12": [
+          2794
+        ],
+        "13": [
+          2042
+        ],
+        "3": [
+          3852
+        ],
+        "2": [
+          3840
+        ],
+        "14": [
+          103
+        ],
+        "15": [
+          115
+        ],
+        "5": [
+          1300
+        ],
+        "4": [
+          1311
+        ],
+        "8": [
+          3258
+        ],
+        "9": [
+          3246
+        ],
+        "7": [
+          2257
+        ],
+        "6": [
+          2711
+        ],
+        "10": [
+          2269
+        ],
+        "11": [
+          2699
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.676797729304283
+    }
+  }
+}

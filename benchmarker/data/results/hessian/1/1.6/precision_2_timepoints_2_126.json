@@ -1,0 +1,279 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 16,
+  "num_rows": 23,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        39593
+      ],
+      [
+        47785
+      ],
+      [
+        47787
+      ],
+      [
+        38441
+      ],
+      [
+        37545
+      ],
+      [
+        37481
+      ],
+      [
+        6817
+      ],
+      [
+        39305
+      ],
+      [
+        39337
+      ],
+      [
+        43690
+      ],
+      [
+        23205
+      ],
+      [
+        23209
+      ],
+      [
+        43689
+      ],
+      [
+        38569
+      ],
+      [
+        39065
+      ],
+      [
+        6825
+      ],
+      [
+        39081
+      ],
+      [
+        42666
+      ],
+      [
+        6313
+      ],
+      [
+        38313
+      ],
+      [
+        43162
+      ],
+      [
+        47259
+      ],
+      [
+        24229
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      23,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2.5
+      ],
+      "data_type": "float64",
+      "shape": [
+        23
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        883,
+        1,
+        1,
+        6,
+        4,
+        3,
+        4,
+        4,
+        18,
+        7,
+        8,
+        3,
+        5,
+        10,
+        19,
+        10,
+        8,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data_type": "int64",
+      "shape": [
+        23
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        23
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 208620.0,
+      "qpu_anneal_time_per_sample": 100.0,
+      "qpu_readout_time_per_sample": 48.05,
+      "qpu_access_time": 243208.0,
+      "qpu_access_overhead_time": 869.0,
+      "qpu_programming_time": 34588.0,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 1.0,
+      "post_processing_overhead_time": 1.0
+    },
+    "problem_id": "961f8c5a-7cc3-4c5c-a33d-cf180f7b9c28",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          3452
+        ],
+        "0": [
+          3441
+        ],
+        "12": [
+          1744
+        ],
+        "13": [
+          1733
+        ],
+        "3": [
+          999
+        ],
+        "2": [
+          3256
+        ],
+        "14": [
+          988
+        ],
+        "15": [
+          3245
+        ],
+        "5": [
+          3111
+        ],
+        "4": [
+          711
+        ],
+        "8": [
+          3099
+        ],
+        "9": [
+          699
+        ],
+        "7": [
+          4626
+        ],
+        "6": [
+          4614
+        ],
+        "10": [
+          1271
+        ],
+        "11": [
+          1259
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.676797729304283
+    }
+  }
+}

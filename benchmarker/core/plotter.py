@@ -316,9 +316,9 @@ class BenchmarkPlotter:
 
         self._setup_style(fontsize=13)
         loader = results_loader.ResultsLoader()
-        topologies = ['1.4', '6.4']
+        topologies = ['1.6', '6.4']
         solver_names = {
-            '1.4':'Advantage2',
+            '1.6':'Advantage2',
             '6.4':'Advantage',
         }
         systems = [1,3]
@@ -326,8 +326,8 @@ class BenchmarkPlotter:
         # przygotowanie figure z dwoma subplotami
         colors = {2: 'tab:blue', 3: 'tab:orange', 4: 'tab:green', 5: 'tab:red', 
              6: 'tab:purple', 7: 'tab:brown', 8: 'tab:pink', 9: 'tab:gray'}
-        linestyles = {'1.4': 'dashed', '6.4': 'solid'}
-        markers = {'1.4': 'o', '6.4': '^'}
+        linestyles = {'1.6': 'dashed', '6.4': 'solid'}
+        markers = {'1.6': 'o', '6.4': '^'}
         titles = {2: rf'$\left| \Psi_{system} \right\rangle$', 9: '^'}
 
 

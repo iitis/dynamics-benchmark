@@ -1,0 +1,262 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 16,
+  "num_rows": 20,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        39593
+      ],
+      [
+        23209
+      ],
+      [
+        37481
+      ],
+      [
+        6817
+      ],
+      [
+        37545
+      ],
+      [
+        47787
+      ],
+      [
+        6825
+      ],
+      [
+        39081
+      ],
+      [
+        47785
+      ],
+      [
+        39337
+      ],
+      [
+        38569
+      ],
+      [
+        38441
+      ],
+      [
+        23205
+      ],
+      [
+        39065
+      ],
+      [
+        43689
+      ],
+      [
+        39305
+      ],
+      [
+        43690
+      ],
+      [
+        6305
+      ],
+      [
+        22053
+      ],
+      [
+        39465
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      20,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1,
+        1,
+        1
+      ],
+      "data_type": "float64",
+      "shape": [
+        20
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        926,
+        2,
+        2,
+        6,
+        1,
+        1,
+        5,
+        3,
+        2,
+        5,
+        7,
+        6,
+        14,
+        5,
+        1,
+        4,
+        7,
+        1,
+        1,
+        1
+      ],
+      "data_type": "int64",
+      "shape": [
+        20
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        20
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 606520.0,
+      "qpu_anneal_time_per_sample": 500.0,
+      "qpu_readout_time_per_sample": 45.95,
+      "qpu_access_time": 641107.2,
+      "qpu_access_overhead_time": 6855.8,
+      "qpu_programming_time": 34587.2,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 58.0,
+      "post_processing_overhead_time": 58.0
+    },
+    "problem_id": "152f680d-f612-4922-a5d4-03c1acf19e5b",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          3496
+        ],
+        "0": [
+          3484
+        ],
+        "12": [
+          881
+        ],
+        "13": [
+          869
+        ],
+        "3": [
+          59
+        ],
+        "2": [
+          83,
+          4632
+        ],
+        "14": [
+          4680
+        ],
+        "15": [
+          71
+        ],
+        "5": [
+          3259
+        ],
+        "4": [
+          1503
+        ],
+        "8": [
+          1492
+        ],
+        "9": [
+          3247
+        ],
+        "7": [
+          1113
+        ],
+        "6": [
+          4205
+        ],
+        "10": [
+          1124
+        ],
+        "11": [
+          4217
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.676797729304283
+    }
+  }
+}
