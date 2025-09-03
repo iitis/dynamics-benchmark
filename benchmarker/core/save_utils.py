@@ -27,7 +27,7 @@ def save_benchmark_result(system: int, solver: str, precision: int, timepoints: 
     
     Args:
         system: system or instance id/name
-        solver: solver id (e.g., '6.4', '1.4', 'velox')
+        solver: solver id (e.g., '6.4', '1.6', 'velox')
         precision: precision value (int)
         timepoints: number of timepoints (int)
         result: BenchmarkResult instance to save

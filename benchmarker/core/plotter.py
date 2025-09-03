@@ -101,7 +101,7 @@ class BenchmarkPlotter:
 
         for _, system in tqdm(enumerate(systems), total=len(systems)):
             velox_tts = loader.get_velox_tts(system)
-            dwave_14_tts = loader.get_dwave_tts(system, topology='1.4', file_limit=file_limit, ta=200,num_reps=num_reps)
+            dwave_14_tts = loader.get_dwave_tts(system, topology='1.6', file_limit=file_limit, ta=200,num_reps=num_reps)
             dwave_64_tts = loader.get_dwave_tts(system, topology='6.4', file_limit=file_limit, ta=200,num_reps=num_reps)
             neal_tts = loader.get_dwave_tts(system, topology='neal', file_limit=file_limit, num_reps=num_reps)
             ALL_dfs.append(velox_tts)
@@ -110,7 +110,7 @@ class BenchmarkPlotter:
             ALL_dfs.append(neal_tts)
 
 
-        sources = ['VELOX', '1.4', '6.4','neal']
+        sources = ['VELOX', '1.6', '6.4','neal']
         linestyles = ['-', '-', '-','-']
         all_system_dfs = pd.concat(ALL_dfs, axis=0)
         native_system_df = all_system_dfs[all_system_dfs.system.isin(systems)]
@@ -138,7 +138,7 @@ class BenchmarkPlotter:
                 marker=['o', 's', '^','x'][i],
                 linestyle='',
                 color=colors[i],
-                label=['VeloxQ', 'Advantage2 1.4', 'Advantage 6.4','neal'][i],
+                label=['VeloxQ', 'Advantage2 1.6', 'Advantage 6.4','neal'][i],
                 markersize=8,
                 alpha=0.8,
             )

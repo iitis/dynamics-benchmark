@@ -56,7 +56,7 @@ class QuantumTestCase(TestCase):
         system (int): System ID to benchmark
         sampler (str): Quantum annealer to use. Available options:
             - 'neal': Software-based simulated quantum annealing
-            - '1.4': D-Wave Advantage2 system1.4 (Zephyr)
+            - '1.6': D-Wave Advantage2 system1.6 (Zephyr)
             - '6.4': D-Wave Advantage system6.4
         timepoints (int): Number of time points to simulate
         ta (int): Annealing time in microseconds
@@ -112,8 +112,8 @@ class QuantumTestCase(TestCase):
             return sampler.sample(qubo, num_reads=self.num_reps)
 
         # Configure D-Wave sampler based on solver ID
-        elif self.sampler == "1.4":  # zephyr
-            dw_sampler = EmbeddingComposite(DWaveSampler(solver="Advantage2_system1.4"))
+        elif self.sampler == "1.6":  # zephyr
+            dw_sampler = EmbeddingComposite(DWaveSampler(solver="Advantage2_system1.6"))
         elif self.sampler == "6.4":
             dw_sampler = EmbeddingComposite(DWaveSampler(solver="Advantage_system6.4"))
         else:
