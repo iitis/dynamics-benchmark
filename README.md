@@ -45,24 +45,27 @@ pip install -e .
 ## Project Structure
 ```
 dynamics-benchmark/
-├── benchmarker/           # Main package
-│   ├── core/             # Core functionality
-│   │   ├── case.py       # Test case definitions
-│   │   ├── instance.py   # Problem instances
-│   │   ├── plotter.py    # Plotting utilities
-│   │   ├── results.py    # Results handling
-│   │   ├── runner.py     # Benchmark execution
-│   │   └── save_utils.py # Data persistence
-│   ├── scripts/          # Analysis & plotting scripts
-│   │   ├── plot_dynamics.py        # System dynamics visualization
-│   │   ├── plot_success_prob.py    # Success probability analysis
-│   │   ├── plot_tta_comparison.py  # Time-to-answer comparison
-│   │   ├── print_success_ratios.py # Success ratio statistics
-│   │   ├── run_benchmark_tests.py  # Run benchmark test suite
-│   │   └── run_velox.py           # Velox solver execution
-│   └── main.py           # Entry point
-├── data/                 # Benchmark data
-└── plots/               # Generated visualizations
+└── benchmarker/           # Main package
+    ├── core/             # Core functionality
+    │   ├── case.py       # Test case definitions
+    │   ├── instance.py   # Problem instances
+    │   ├── plotter.py    # Plotting utilities
+    │   ├── results.py    # Results handling
+    │   ├── runner.py     # Benchmark execution
+    │   └── save_utils.py # Data persistence
+    ├── data/             # Benchmark data
+    │   ├── instances/    # Problem instance definitions
+    │   ├── results/      # Benchmark results
+    │   └── xubo/         # XUBO formulations
+    ├── plots/            # Generated visualizations
+    ├── scripts/          # Analysis & plotting scripts
+    │   ├── plot_dynamics.py        # System dynamics visualization
+    │   ├── plot_success_prob.py    # Success probability analysis
+    │   ├── plot_tta_comparison.py  # Time-to-answer comparison
+    │   ├── print_success_ratios.py # Success ratio statistics
+    │   ├── run_benchmark_tests.py  # Run benchmark test suite
+    │   └── run_velox.py           # Velox solver execution
+    └── main.py           # Entry point
 ```
 
 ## Usage
@@ -94,13 +97,13 @@ python -m benchmarker.scripts.print_success_ratios
 
 Each script supports various command-line arguments. Use `--help` with any script to see available options.
 
-## Data Storage
+## Data Organization
 
-Results and data are organized as follows:
-- `data/instances/`: Raw problem instances
-- `data/results/<system_id>/<solver>/`: Benchmark results per system and solver
-- `data/xubo/`: XUBO problem representations
-- `plots/`: Generated visualizations and analysis results
+All data is stored within the benchmarker package:
+- `benchmarker/data/instances/`: Raw problem instances
+- `benchmarker/data/results/<system_id>/<solver>/`: Benchmark results per system and solver
+- `benchmarker/data/xubo/`: XUBO problem representations
+- `benchmarker/plots/`: Generated visualizations and analysis results
 
 ## Documentation
 
