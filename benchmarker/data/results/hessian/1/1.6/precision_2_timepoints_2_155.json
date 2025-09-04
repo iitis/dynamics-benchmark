@@ -1,0 +1,279 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 16,
+  "num_rows": 23,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        39593
+      ],
+      [
+        37545
+      ],
+      [
+        47787
+      ],
+      [
+        39081
+      ],
+      [
+        6825
+      ],
+      [
+        6817
+      ],
+      [
+        23205
+      ],
+      [
+        47785
+      ],
+      [
+        38441
+      ],
+      [
+        43690
+      ],
+      [
+        39337
+      ],
+      [
+        23209
+      ],
+      [
+        43689
+      ],
+      [
+        39065
+      ],
+      [
+        39305
+      ],
+      [
+        37481
+      ],
+      [
+        38569
+      ],
+      [
+        39465
+      ],
+      [
+        43162
+      ],
+      [
+        38153
+      ],
+      [
+        39561
+      ],
+      [
+        43402
+      ],
+      [
+        39817
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      23,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data_type": "float64",
+      "shape": [
+        23
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        886,
+        3,
+        2,
+        3,
+        11,
+        3,
+        7,
+        5,
+        5,
+        10,
+        15,
+        3,
+        5,
+        9,
+        7,
+        9,
+        9,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "data_type": "int64",
+      "shape": [
+        23
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        23
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 201540.0,
+      "qpu_anneal_time_per_sample": 100.0,
+      "qpu_readout_time_per_sample": 40.97,
+      "qpu_access_time": 236128.8,
+      "qpu_access_overhead_time": 1593.2,
+      "qpu_programming_time": 34588.8,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 1.0,
+      "post_processing_overhead_time": 1.0
+    },
+    "problem_id": "473f78fc-7d77-4206-a0e0-01fc05068aa3",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          2897
+        ],
+        "0": [
+          2885
+        ],
+        "12": [
+          1070
+        ],
+        "13": [
+          1058
+        ],
+        "3": [
+          548
+        ],
+        "2": [
+          4034
+        ],
+        "14": [
+          4046
+        ],
+        "15": [
+          536
+        ],
+        "5": [
+          2962
+        ],
+        "4": [
+          2066
+        ],
+        "8": [
+          2974
+        ],
+        "9": [
+          2078
+        ],
+        "7": [
+          679
+        ],
+        "6": [
+          3747
+        ],
+        "10": [
+          3759
+        ],
+        "11": [
+          690
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.676797729304283
+    }
+  }
+}

@@ -49,60 +49,63 @@ dynamics-benchmark/
 │   ├── core/             # Core functionality
 │   │   ├── case.py       # Test case definitions
 │   │   ├── instance.py   # Problem instances
+│   │   ├── plotter.py    # Plotting utilities
 │   │   ├── results.py    # Results handling
 │   │   ├── runner.py     # Benchmark execution
 │   │   └── save_utils.py # Data persistence
+│   ├── scripts/          # Analysis & plotting scripts
+│   │   ├── plot_dynamics.py        # System dynamics visualization
+│   │   ├── plot_success_prob.py    # Success probability analysis
+│   │   ├── plot_tta_comparison.py  # Time-to-answer comparison
+│   │   ├── print_success_ratios.py # Success ratio statistics
+│   │   ├── run_benchmark_tests.py  # Run benchmark test suite
+│   │   └── run_velox.py           # Velox solver execution
 │   └── main.py           # Entry point
 ├── data/                 # Benchmark data
-│   ├── instances/        # Problem instances
-│   ├── results/         # Benchmark results
-│   └── xubo/            # XUBO formulations
 └── plots/               # Generated visualizations
 ```
 
 ## Usage
 
-### Basic Example
-```python
-from benchmarker.core.runner import BenchmarkRunner
-from benchmarker.core.case import QuantumTestCase
+### Running Benchmarks
+```bash
+# Run benchmark test suite
+python -m benchmarker.scripts.run_benchmark_tests \
+    --systems 1 2 3 \
+    --samplers 1.6 \
+    --annealing-times 100 200 \
+    --num-reps 1000
 
-# Create test cases
-test_cases = [
-    QuantumTestCase(
-        system=1,
-        sampler='neal',
-        timepoints=3,
-        ta=200
-    )
-]
+# Run benchmarks with Velox solver
+python -m benchmarker.scripts.run_velox --system 1 --timepoints 3
 
-# Run benchmarks
-runner = BenchmarkRunner(test_cases=test_cases)
-results = runner.run()
+# Generate dynamics plots
+python -m benchmarker.scripts.plot_dynamics --system 1
+
+# Analyze success probabilities
+python -m benchmarker.scripts.plot_success_prob_by_ta --system 1
+
+# Compare time-to-answer metrics
+python -m benchmarker.scripts.plot_tta_comparison
+
+# Print success ratios
+python -m benchmarker.scripts.print_success_ratios
 ```
 
-### Plotting Results
-```python
-from benchmarker.core.plotter import BenchmarkPlotter
+Each script supports various command-line arguments. Use `--help` with any script to see available options.
 
-plotter = BenchmarkPlotter()
-plotter.plot_dynamics(system=1, timepoints=3)
-```
+## Data Storage
 
-## Data Management
+Results and data are organized as follows:
+- `data/instances/`: Raw problem instances
+- `data/results/<system_id>/<solver>/`: Benchmark results per system and solver
+- `data/xubo/`: XUBO problem representations
+- `plots/`: Generated visualizations and analysis results
 
-Results are stored in a hierarchical structure:
-```
-data/
-├── instances/           # Raw problem instances
-├── results/            # Benchmark results
-│   └── <system_id>/
-│       └── <solver>/
-│           └── precision_<p>_timepoints_<t>.json
-└── xubo/              # XUBO representations
-```
+## Documentation
+
+For detailed API documentation and advanced usage, please refer to the docstrings in the source code. Each module and script is documented with examples and parameter descriptions.
 
 ## Related Projects
 
-This project builds on [dwdynamics](dwdynamics/README.md), which provides the core functionality for quantum dynamics simulation. While dwdynamics focuses on the implementation of different solving methods, this framework adds benchmarking capabilities and result analysis.
+This project builds on [dwdynamics](dwdynamics/README.md), which provides the core functionality for quantum dynamics simulation. While dwdynamics focuses on the implementation of solving methods, this framework adds benchmarking capabilities and comprehensive result analysis.

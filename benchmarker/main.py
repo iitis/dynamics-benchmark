@@ -13,8 +13,8 @@ test_cases=[
         ta=tas,
         num_reps=1000
     ) 
-    for system in [2,4,5,6,7,8] 
-    for tas in [10,100,200,500]
+    for system in [1,2,3,4] 
+    for tas in [10,100,200]
     for timepoints in range(2,3) 
     for sampler in ['1.6'] 
     for _ in range(5)
