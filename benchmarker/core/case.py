@@ -9,6 +9,7 @@ from .save_utils import save_benchmark_result
 from .instance import BenchmarkInstance
 from ..config import RESULTS_DIR, ensure_dir
 import json
+import dwave.inspector
 
 class TestCase(ABC):
     """Abstract base class for all test cases.
@@ -112,15 +113,16 @@ class QuantumTestCase(TestCase):
             return sampler.sample(qubo, num_reads=self.num_reps)
 
         # Configure D-Wave sampler based on solver ID
-        elif self.sampler == "1.6":  # zephyr
-            dw_sampler = EmbeddingComposite(DWaveSampler(solver="Advantage2_system1.6"))
+        elif self.sampler == "1.8":  # zephyr
+            dw_sampler = EmbeddingComposite(DWaveSampler(solver="Advantage2_system1.8"))
         elif self.sampler == "6.4":
             dw_sampler = EmbeddingComposite(DWaveSampler(solver="Advantage_system6.4"))
         else:
             raise ValueError(f"Invalid solver id: {self.sampler}")
-
-        return dw_sampler.sample(qubo, num_reads=self.num_reps, annealing_time=self.ta, return_embedding=True)
-
+        
+        sampleset =  dw_sampler.sample(qubo, num_reads=self.num_reps, annealing_time=self.ta, return_embedding=True)
+        dwave.inspector.show(sampleset)
+        return sampleset
     def run(self) -> BenchmarkResult:
         """Common run logic for all quantum test cases."""
         instance = self.create_instance()

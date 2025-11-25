@@ -1,7 +1,10 @@
 from benchmarker.core.runner import BenchmarkRunner
 from benchmarker.core.case import QuantumTestCase
 from benchmarker.core.plotter import BenchmarkPlotter
+from benchmarker.core.instance import BenchmarkInstance
 from typing import Sequence
+
+
 
 # Create test cases
 
@@ -11,12 +14,12 @@ test_cases=[
         sampler=sampler,
         timepoints=timepoints,
         ta=tas,
-        num_reps=1000
+        num_reps=1000,
     ) 
-    for system in [1,2,3,4] 
+    for system in [1] 
     for tas in [10,100,200]
-    for timepoints in range(2,3) 
-    for sampler in ['1.6'] 
+    for timepoints in [1000]
+    for sampler in ['1.8'] 
     for _ in range(5)
 ]
 

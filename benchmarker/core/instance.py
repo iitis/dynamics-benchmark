@@ -15,7 +15,7 @@ class BenchmarkInstance:
         
         Args:
             instance_id: The ID of the instance
-            number_time_points: Number of time points to use
+            number_time_points: Number of time poin ts to use
             objective: The objective function to use (hessian or norm)
             base_path: Optional custom path to instances directory
         """
