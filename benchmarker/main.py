@@ -5,7 +5,6 @@ from benchmarker.core.instance import BenchmarkInstance
 from typing import Sequence
 
 
-
 # Create test cases
 
 test_cases=[

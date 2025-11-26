@@ -1,9 +1,24 @@
 from benchmarker.core.instance import BenchmarkInstance
-test_cases=[
-    BenchmarkInstance(
-        instance_id=system,
-        number_time_points=timepoints,
-    ) 
-    for system in range(1,9) 
-    for timepoints in [1000,10000]
-]
+
+from memory_profiler import profile 
+
+@profile
+def create_instance(tp):
+    test_cases=[
+        BenchmarkInstance(
+            instance_id=system,
+            number_time_points=tp,
+        ) 
+        for system in range(1,2) 
+    ]
+
+
+## Change here 
+num_timepoints = [2000]
+###
+
+
+for i in num_timepoints:
+    create_instance(i)
+
+print("Done")
