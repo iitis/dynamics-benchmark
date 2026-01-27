@@ -152,6 +152,7 @@ class ResultsLoader:
         return df
     
 
+
     def get_velox_results(self, system: int,timepoints = None) -> pd.DataFrame:
         """
         Load Velox results for a given system from CSV and parse relevant fields.
@@ -191,6 +192,82 @@ class ResultsLoader:
         if timepoints is not None:
             df = df[df.timepoints == timepoints]
             return df
+        return df
+    
+
+    def get_velox_results(self, system: int, solver_name="velox", timepoints=None) -> pd.DataFrame:
+        """
+        Load Velox results for a given system from CSV and parse relevant fields.
+
+        Args:
+            system: System identifier
+
+        Returns:
+            DataFrame containing parsed results
+        """
+        filename = ''
+        if solver_name == 'SA_GPU':
+            filename = f"results_hessian_{system}_native.csv"
+        elif solver_name == 'neal':
+            filename = f"results_hessian_{system}_ocean.csv"
+        else:
+            # filename = f"best_results_hessian_{system}.csv"
+            # filename = f"best_results_hessian_{system}_native.csv"
+            filename = f"new4_best_results_hessian_{system}.csv"
+
+        path = self.base_path / str(system) / solver_name / filename
+        print(f"Loading Velox results from {path}")
+
+        if not path.exists():
+            print("path does not exist")
+            return pd.DataFrame()
+
+        df = pd.read_csv(path)
+        df_dict = defaultdict(list)
+
+        # Process each row
+        for row in df.itertuples():
+            # Extract precision and timepoints using regex
+            precision, row_timepoints = re.findall(r'\d+', str(row.instance))
+            df_dict['precision'].append(int(precision))
+            df_dict['timepoints'].append(int(row_timepoints))
+
+            # Convert and append other fields
+            try:
+              df_dict['num_steps'].append(int(str(row.num_steps)))
+            except:
+              df_dict['num_steps'].append(int(str(row.num_sweeps)))
+            df_dict['runtime'].append(float(str(row.runtime)) * 1e3)
+            df_dict['gap'].append(float(str(row.gap)))
+            try:
+              df_dict['num_rep'].append(int(str(row.num_rep)))
+            except:
+              df_dict['num_rep'].append(int(str(row.num_reads)))
+            df_dict['success_prob'].append(float(str(row.success_prob)))
+            df_dict['solution'].append(str(row.best_solution).replace("-1", "0").replace(';', ''))
+            df_dict['num_var'].append(int(str(row.num_var)))
+
+        df = pd.DataFrame(df_dict)
+        if timepoints is not None:
+            df = df[df.timepoints == timepoints]
+            return df
+        return df
+
+    def get_velox_tts_old(self,system:int, solver_name="velox")->pd.DataFrame:
+        """
+        Compute Velox success rates for a given system.
+
+        Args:
+            system (int): System identifier.
+
+        Returns:
+            pd.DataFrame: DataFrame containing aggregated success rates and runtimes.
+        """
+        df = self.get_velox_results(system=system, solver_name=solver_name)
+        df['tts99'] = df.apply(lambda row: self.return_tts(row['success_prob'],row.runtime),axis=1)
+        df = df[['precision','timepoints','num_var','tts99']].groupby(['precision','timepoints','num_var']).min().reset_index()
+        df['system'] = system
+        df['source'] = solver_name.upper()
         return df
 
     def get_velox_tts(self,system:int)->pd.DataFrame:
