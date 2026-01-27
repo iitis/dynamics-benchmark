@@ -1,0 +1,286 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 16,
+  "num_rows": 24,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        43177
+      ],
+      [
+        26793
+      ],
+      [
+        10409
+      ],
+      [
+        34985
+      ],
+      [
+        39049
+      ],
+      [
+        26665
+      ],
+      [
+        34969
+      ],
+      [
+        39081
+      ],
+      [
+        41129
+      ],
+      [
+        42145
+      ],
+      [
+        43690
+      ],
+      [
+        10345
+      ],
+      [
+        41125
+      ],
+      [
+        42153
+      ],
+      [
+        43689
+      ],
+      [
+        43161
+      ],
+      [
+        10858
+      ],
+      [
+        43434
+      ],
+      [
+        42665
+      ],
+      [
+        43179
+      ],
+      [
+        27177
+      ],
+      [
+        38057
+      ],
+      [
+        41637
+      ],
+      [
+        44193
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      24,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data_type": "float64",
+      "shape": [
+        24
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        845,
+        6,
+        2,
+        5,
+        8,
+        5,
+        5,
+        5,
+        6,
+        8,
+        35,
+        7,
+        10,
+        11,
+        33,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data_type": "int64",
+      "shape": [
+        24
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        24
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 308680.0,
+      "qpu_anneal_time_per_sample": 200.0,
+      "qpu_readout_time_per_sample": 48.11,
+      "qpu_access_time": 343272.8,
+      "qpu_access_overhead_time": 9044.2,
+      "qpu_programming_time": 34592.8,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 1.0,
+      "post_processing_overhead_time": 1.0
+    },
+    "problem_id": "1c1cf900-cd5e-494e-975d-05f8c294bcdf",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          2483
+        ],
+        "0": [
+          2208
+        ],
+        "8": [
+          2495
+        ],
+        "9": [
+          2519,
+          2232
+        ],
+        "3": [
+          3371
+        ],
+        "2": [
+          2285
+        ],
+        "10": [
+          3383
+        ],
+        "11": [
+          2296
+        ],
+        "5": [
+          435
+        ],
+        "4": [
+          447
+        ],
+        "12": [
+          3146
+        ],
+        "13": [
+          3157
+        ],
+        "7": [
+          3627
+        ],
+        "6": [
+          737
+        ],
+        "14": [
+          3639
+        ],
+        "15": [
+          726
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.676797729304283
+    }
+  }
+}

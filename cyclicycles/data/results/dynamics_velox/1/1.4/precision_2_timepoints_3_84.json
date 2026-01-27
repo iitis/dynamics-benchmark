@@ -1,0 +1,228 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 24,
+  "num_rows": 9,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        11049641
+      ],
+      [
+        10000809
+      ],
+      [
+        6855337
+      ],
+      [
+        11184810
+      ],
+      [
+        6854313
+      ],
+      [
+        6854185
+      ],
+      [
+        11184809
+      ],
+      [
+        10660522
+      ],
+      [
+        10889890
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      9,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1,
+        1
+      ],
+      "data_type": "float64",
+      "shape": [
+        9
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        79,
+        1,
+        2,
+        8,
+        1,
+        1,
+        6,
+        1,
+        1
+      ],
+      "data_type": "int64",
+      "shape": [
+        9
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        9
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 31506.0,
+      "qpu_anneal_time_per_sample": 200.0,
+      "qpu_readout_time_per_sample": 54.49,
+      "qpu_access_time": 66100.4,
+      "qpu_access_overhead_time": 8151.6,
+      "qpu_programming_time": 34594.4,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 1.0,
+      "post_processing_overhead_time": 1.0
+    },
+    "problem_id": "f4f1ee0b-ba3f-45c7-a6e0-bc3a1aac0a83",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          893
+        ],
+        "0": [
+          3412
+        ],
+        "12": [
+          952,
+          3400
+        ],
+        "13": [
+          3424
+        ],
+        "3": [
+          3838
+        ],
+        "2": [
+          3826
+        ],
+        "14": [
+          2106
+        ],
+        "15": [
+          2095
+        ],
+        "5": [
+          1108
+        ],
+        "4": [
+          1119
+        ],
+        "8": [
+          3245
+        ],
+        "9": [
+          3257
+        ],
+        "7": [
+          2964
+        ],
+        "6": [
+          2952
+        ],
+        "10": [
+          182
+        ],
+        "11": [
+          170
+        ],
+        "20": [
+          1132
+        ],
+        "21": [
+          1143
+        ],
+        "22": [
+          2904
+        ],
+        "23": [
+          2916
+        ],
+        "16": [
+          1000
+        ],
+        "17": [
+          989
+        ],
+        "18": [
+          3766
+        ],
+        "19": [
+          3754
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.8926835886292948
+    }
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 16,
+  "num_rows": 23,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        39593
+      ],
+      [
+        47787
+      ],
+      [
+        47785
+      ],
+      [
+        43690
+      ],
+      [
+        23209
+      ],
+      [
+        39065
+      ],
+      [
+        6825
+      ],
+      [
+        39305
+      ],
+      [
+        23205
+      ],
+      [
+        39081
+      ],
+      [
+        43689
+      ],
+      [
+        39337
+      ],
+      [
+        38441
+      ],
+      [
+        38569
+      ],
+      [
+        37545
+      ],
+      [
+        37481
+      ],
+      [
+        5673
+      ],
+      [
+        31397
+      ],
+      [
+        45673
+      ],
+      [
+        39589
+      ],
+      [
+        6313
+      ],
+      [
+        39595
+      ],
+      [
+        42409
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      23,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1.5
+      ],
+      "data_type": "float64",
+      "shape": [
+        23
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        911,
+        1,
+        11,
+        4,
+        4,
+        7,
+        6,
+        10,
+        2,
+        6,
+        2,
+        9,
+        2,
+        12,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data_type": "int64",
+      "shape": [
+        23
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        23
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 307460.0,
+      "qpu_anneal_time_per_sample": 200.0,
+      "qpu_readout_time_per_sample": 46.89,
+      "qpu_access_time": 342052.8,
+      "qpu_access_overhead_time": 7857.2,
+      "qpu_programming_time": 34592.8,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 6.0,
+      "post_processing_overhead_time": 6.0
+    },
+    "problem_id": "b7d2bba6-d8bd-48c8-91e4-0bd2ad1cd9c1",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          2152
+        ],
+        "0": [
+          2140
+        ],
+        "12": [
+          3347
+        ],
+        "13": [
+          3358
+        ],
+        "3": [
+          1830
+        ],
+        "2": [
+          3585
+        ],
+        "14": [
+          3597
+        ],
+        "15": [
+          1841
+        ],
+        "5": [
+          1136
+        ],
+        "4": [
+          4037
+        ],
+        "8": [
+          1148
+        ],
+        "9": [
+          4049
+        ],
+        "7": [
+          1363
+        ],
+        "6": [
+          1352
+        ],
+        "10": [
+          4015
+        ],
+        "11": [
+          4026
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.676797729304283
+    }
+  }
+}

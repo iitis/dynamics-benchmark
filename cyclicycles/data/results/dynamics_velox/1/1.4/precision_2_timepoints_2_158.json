@@ -1,0 +1,190 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 16,
+  "num_rows": 8,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        39593
+      ],
+      [
+        39305
+      ],
+      [
+        6817
+      ],
+      [
+        39081
+      ],
+      [
+        37545
+      ],
+      [
+        39337
+      ],
+      [
+        43690
+      ],
+      [
+        38041
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      8,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1
+      ],
+      "data_type": "float64",
+      "shape": [
+        8
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        93,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data_type": "int64",
+      "shape": [
+        8
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        8
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 31366.0,
+      "qpu_anneal_time_per_sample": 200.0,
+      "qpu_readout_time_per_sample": 53.09,
+      "qpu_access_time": 65960.0,
+      "qpu_access_overhead_time": 9657.0,
+      "qpu_programming_time": 34594.0,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 1.0,
+      "post_processing_overhead_time": 1.0
+    },
+    "problem_id": "c85b38fd-a00c-46a6-abf6-5e5bcbb751a9",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          3151
+        ],
+        "0": [
+          1359
+        ],
+        "12": [
+          3162
+        ],
+        "13": [
+          1347
+        ],
+        "3": [
+          1738
+        ],
+        "2": [
+          4364
+        ],
+        "14": [
+          4353
+        ],
+        "15": [
+          1749
+        ],
+        "5": [
+          55
+        ],
+        "4": [
+          114,
+          3744
+        ],
+        "8": [
+          3768
+        ],
+        "9": [
+          66
+        ],
+        "7": [
+          4346
+        ],
+        "6": [
+          4358
+        ],
+        "10": [
+          501
+        ],
+        "11": [
+          490
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.676797729304283
+    }
+  }
+}

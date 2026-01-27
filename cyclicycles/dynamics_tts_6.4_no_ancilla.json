@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "solver": "6.4",
+    "solver_versions": [
+      "6.4"
+    ],
+    "with_ancilla": false,
+    "cycles_filter": null,
+    "description": "Cyclic annealing TTS data: x = number of qubits, y = Time To Solution (milliseconds)"
+  },
+  "data": [
+    {
+      "x": 16,
+      "y": 160927.0181297957
+    },
+    {
+      "x": 24,
+      "y": 489634.0235702932
+    },
+    {
+      "x": 32,
+      "y": 1724060.7863578366
+    },
+    {
+      "x": 48,
+      "y": 4262252.902170971
+    }
+  ],
+  "num_points": 4
+}

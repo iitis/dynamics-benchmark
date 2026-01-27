@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "solver": "1",
+    "solver_versions": [
+      "1.6",
+      "1.7",
+      "1.8",
+      "1.10"
+    ],
+    "with_ancilla": false,
+    "cycles_filter": null,
+    "description": "Cyclic annealing TTS data: x = number of qubits, y = Time To Solution (milliseconds)"
+  },
+  "data": [
+    {
+      "x": 16,
+      "y": 943404.470963193
+    },
+    {
+      "x": 24,
+      "y": 8265957.300595824
+    },
+    {
+      "x": 32,
+      "y": 69406.8271648218
+    },
+    {
+      "x": 48,
+      "y": 1887771.3594558924
+    },
+    {
+      "x": 64,
+      "y": 11507347.063710352
+    },
+    {
+      "x": 80,
+      "y": 48480469.16676231
+    },
+    {
+      "x": 96,
+      "y": 5441119.689631719
+    }
+  ],
+  "num_points": 7
+}

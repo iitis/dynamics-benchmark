@@ -1,0 +1,291 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 16,
+  "num_rows": 25,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        39593
+      ],
+      [
+        43689
+      ],
+      [
+        39081
+      ],
+      [
+        39065
+      ],
+      [
+        38441
+      ],
+      [
+        6825
+      ],
+      [
+        39337
+      ],
+      [
+        6817
+      ],
+      [
+        39305
+      ],
+      [
+        37481
+      ],
+      [
+        47785
+      ],
+      [
+        38569
+      ],
+      [
+        37545
+      ],
+      [
+        23209
+      ],
+      [
+        23205
+      ],
+      [
+        43690
+      ],
+      [
+        47787
+      ],
+      [
+        27301
+      ],
+      [
+        39561
+      ],
+      [
+        27302
+      ],
+      [
+        45673
+      ],
+      [
+        43402
+      ],
+      [
+        21157
+      ],
+      [
+        15017
+      ],
+      [
+        39577
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      25,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data_type": "float64",
+      "shape": [
+        25
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        882,
+        2,
+        2,
+        8,
+        1,
+        9,
+        5,
+        4,
+        7,
+        4,
+        10,
+        16,
+        7,
+        7,
+        11,
+        8,
+        8,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "data_type": "int64",
+      "shape": [
+        25
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        25
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 204820.0,
+      "qpu_anneal_time_per_sample": 100.0,
+      "qpu_readout_time_per_sample": 44.25,
+      "qpu_access_time": 239409.2,
+      "qpu_access_overhead_time": 612.8,
+      "qpu_programming_time": 34589.2,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 27.0,
+      "post_processing_overhead_time": 27.0
+    },
+    "problem_id": "09fc2be3-9090-4768-8c9e-86f38a2536e1",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          521
+        ],
+        "0": [
+          3602
+        ],
+        "12": [
+          3614
+        ],
+        "13": [
+          510
+        ],
+        "3": [
+          4267
+        ],
+        "2": [
+          1617
+        ],
+        "14": [
+          1629
+        ],
+        "15": [
+          4256
+        ],
+        "5": [
+          341
+        ],
+        "4": [
+          3445
+        ],
+        "8": [
+          3433
+        ],
+        "9": [
+          352
+        ],
+        "7": [
+          3691
+        ],
+        "6": [
+          1578
+        ],
+        "10": [
+          1566
+        ],
+        "11": [
+          3680
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.676797729304283
+    }
+  }
+}

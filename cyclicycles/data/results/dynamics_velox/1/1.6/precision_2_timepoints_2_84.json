@@ -1,0 +1,285 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 16,
+  "num_rows": 24,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        39593
+      ],
+      [
+        38441
+      ],
+      [
+        47785
+      ],
+      [
+        38569
+      ],
+      [
+        23205
+      ],
+      [
+        23209
+      ],
+      [
+        6817
+      ],
+      [
+        39305
+      ],
+      [
+        43690
+      ],
+      [
+        39081
+      ],
+      [
+        43689
+      ],
+      [
+        47787
+      ],
+      [
+        6825
+      ],
+      [
+        39065
+      ],
+      [
+        37545
+      ],
+      [
+        37481
+      ],
+      [
+        39337
+      ],
+      [
+        47275
+      ],
+      [
+        43433
+      ],
+      [
+        31401
+      ],
+      [
+        6529
+      ],
+      [
+        43161
+      ],
+      [
+        6569
+      ],
+      [
+        22921
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      24,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data_type": "float64",
+      "shape": [
+        24
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        884,
+        2,
+        4,
+        7,
+        3,
+        5,
+        6,
+        8,
+        12,
+        7,
+        3,
+        4,
+        11,
+        14,
+        5,
+        5,
+        12,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "data_type": "int64",
+      "shape": [
+        24
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        24
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 310820.0,
+      "qpu_anneal_time_per_sample": 200.0,
+      "qpu_readout_time_per_sample": 50.25,
+      "qpu_access_time": 345408.0,
+      "qpu_access_overhead_time": 1278.0,
+      "qpu_programming_time": 34588.0,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 1.0,
+      "post_processing_overhead_time": 1.0
+    },
+    "problem_id": "37846674-5363-4ea4-9b5e-68fd1107b37e",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          872
+        ],
+        "0": [
+          4036
+        ],
+        "12": [
+          4048
+        ],
+        "13": [
+          884
+        ],
+        "3": [
+          3179
+        ],
+        "2": [
+          2140
+        ],
+        "14": [
+          3190
+        ],
+        "15": [
+          2151
+        ],
+        "5": [
+          425
+        ],
+        "4": [
+          414
+        ],
+        "8": [
+          3554
+        ],
+        "9": [
+          3565
+        ],
+        "7": [
+          3701
+        ],
+        "6": [
+          3712
+        ],
+        "10": [
+          966
+        ],
+        "11": [
+          978
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.676797729304283
+    }
+  }
+}

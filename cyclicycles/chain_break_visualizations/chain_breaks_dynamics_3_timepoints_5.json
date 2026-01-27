@@ -1,0 +1,8 @@
+{
+  "num_logical_variables": 0,
+  "num_broken_chains": 0,
+  "embedding": {},
+  "chain_breaks": {},
+  "best_energy": -36.75,
+  "num_samples": 10
+}

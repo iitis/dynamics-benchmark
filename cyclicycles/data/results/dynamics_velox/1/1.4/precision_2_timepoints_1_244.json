@@ -1,0 +1,121 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 8,
+  "num_rows": 2,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        169
+      ],
+      [
+        41
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      2,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5
+      ],
+      "data_type": "float64",
+      "shape": [
+        2
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        99,
+        1
+      ],
+      "data_type": "int64",
+      "shape": [
+        2
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        2
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 30430.0,
+      "qpu_anneal_time_per_sample": 200.0,
+      "qpu_readout_time_per_sample": 43.73,
+      "qpu_access_time": 65021.6,
+      "qpu_access_overhead_time": 8450.4,
+      "qpu_programming_time": 34591.6,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 11.0,
+      "post_processing_overhead_time": 11.0
+    },
+    "problem_id": "0f29d20c-b908-4051-ad3f-601f1b2b6dd3",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          1631
+        ],
+        "0": [
+          4616
+        ],
+        "3": [
+          4596
+        ],
+        "2": [
+          107
+        ],
+        "5": [
+          3955
+        ],
+        "4": [
+          1472
+        ],
+        "7": [
+          2673
+        ],
+        "6": [
+          1849
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 0.707
+    }
+  }
+}

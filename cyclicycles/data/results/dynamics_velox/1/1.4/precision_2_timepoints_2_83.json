@@ -1,0 +1,166 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 16,
+  "num_rows": 4,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        39593
+      ],
+      [
+        23209
+      ],
+      [
+        38441
+      ],
+      [
+        43690
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      4,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "data_type": "float64",
+      "shape": [
+        4
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        96,
+        1,
+        2,
+        1
+      ],
+      "data_type": "int64",
+      "shape": [
+        4
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        4
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 30528.0,
+      "qpu_anneal_time_per_sample": 200.0,
+      "qpu_readout_time_per_sample": 44.71,
+      "qpu_access_time": 65122.8,
+      "qpu_access_overhead_time": 14049.2,
+      "qpu_programming_time": 34594.8,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 1.0,
+      "post_processing_overhead_time": 1.0
+    },
+    "problem_id": "a8f177fd-ac9d-4b71-9638-4fe335d404aa",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          3748
+        ],
+        "0": [
+          3760
+        ],
+        "12": [
+          906
+        ],
+        "13": [
+          895
+        ],
+        "3": [
+          937
+        ],
+        "2": [
+          2644
+        ],
+        "14": [
+          2656
+        ],
+        "15": [
+          948
+        ],
+        "5": [
+          121,
+          2592
+        ],
+        "4": [
+          2664
+        ],
+        "8": [
+          73
+        ],
+        "9": [
+          84
+        ],
+        "7": [
+          3832
+        ],
+        "6": [
+          943
+        ],
+        "10": [
+          954
+        ],
+        "11": [
+          3820
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.676797729304283
+    }
+  }
+}

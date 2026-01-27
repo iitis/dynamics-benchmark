@@ -1,0 +1,207 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 16,
+  "num_rows": 11,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        34953
+      ],
+      [
+        32901
+      ],
+      [
+        33921
+      ],
+      [
+        2185
+      ],
+      [
+        2121
+      ],
+      [
+        18569
+      ],
+      [
+        33929
+      ],
+      [
+        32905
+      ],
+      [
+        18441
+      ],
+      [
+        35465
+      ],
+      [
+        35466
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      11,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        2.5,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "data_type": "float64",
+      "shape": [
+        11
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        954,
+        6,
+        3,
+        4,
+        5,
+        4,
+        6,
+        5,
+        2,
+        4,
+        7
+      ],
+      "data_type": "int64",
+      "shape": [
+        11
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        11
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 310580.0,
+      "qpu_anneal_time_per_sample": 200.0,
+      "qpu_readout_time_per_sample": 50.01,
+      "qpu_access_time": 345172.8,
+      "qpu_access_overhead_time": 9981.2,
+      "qpu_programming_time": 34592.8,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 1.0,
+      "post_processing_overhead_time": 1.0
+    },
+    "problem_id": "b1d6ea2d-8182-487a-a0d8-2eabb28162e5",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          3803
+        ],
+        "0": [
+          2274
+        ],
+        "8": [
+          3815
+        ],
+        "9": [
+          2263
+        ],
+        "3": [
+          1050
+        ],
+        "2": [
+          1038
+        ],
+        "10": [
+          3664
+        ],
+        "11": [
+          3653
+        ],
+        "5": [
+          4058
+        ],
+        "4": [
+          416
+        ],
+        "12": [
+          4069
+        ],
+        "13": [
+          428
+        ],
+        "7": [
+          1775
+        ],
+        "6": [
+          4700
+        ],
+        "14": [
+          1763
+        ],
+        "15": [
+          4689
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.676797729304283
+    }
+  }
+}

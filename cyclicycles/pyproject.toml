@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "cyclicycles"
+version = "0.1.0"
+description = "Cyclic Annealing Test"
+authors = ["Philipp Hanussek <p.hanussek@fz-juelich.de>"]
+readme = "README.md"
+packages = [{include = "cyclicycles", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+dwave-ocean-sdk = ">=9.0.0,<10.0.0"
+numpy = "*"
+pandas = "^2.3.3"
+matplotlib = "^3.10.7"
+pyqt6 = "^6.10.0"
+tqdm = "^4.67.1"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

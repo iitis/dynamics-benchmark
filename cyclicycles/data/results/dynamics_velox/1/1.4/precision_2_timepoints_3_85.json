@@ -1,0 +1,216 @@
+{
+  "type": "SampleSet",
+  "version": {
+    "sampleset_schema": "3.2.0"
+  },
+  "num_variables": 24,
+  "num_rows": 7,
+  "sample_data": {
+    "type": "array",
+    "data": [
+      [
+        11049641
+      ],
+      [
+        10754729
+      ],
+      [
+        10000777
+      ],
+      [
+        6854185
+      ],
+      [
+        10787497
+      ],
+      [
+        11049385
+      ],
+      [
+        11057833
+      ]
+    ],
+    "data_type": "uint32",
+    "shape": [
+      7,
+      1
+    ],
+    "use_bytes": false
+  },
+  "sample_type": "int8",
+  "sample_packed": true,
+  "vectors": {
+    "energy": {
+      "type": "array",
+      "data": [
+        0,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        1,
+        1
+      ],
+      "data_type": "float64",
+      "shape": [
+        7
+      ],
+      "use_bytes": false
+    },
+    "num_occurrences": {
+      "type": "array",
+      "data": [
+        94,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "data_type": "int64",
+      "shape": [
+        7
+      ],
+      "use_bytes": false
+    },
+    "chain_break_fraction": {
+      "type": "array",
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "data_type": "float64",
+      "shape": [
+        7
+      ],
+      "use_bytes": false
+    }
+  },
+  "variable_labels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "variable_type": "BINARY",
+  "info": {
+    "timing": {
+      "qpu_sampling_time": 31628.0,
+      "qpu_anneal_time_per_sample": 200.0,
+      "qpu_readout_time_per_sample": 55.71,
+      "qpu_access_time": 66222.0,
+      "qpu_access_overhead_time": 8268.0,
+      "qpu_programming_time": 34594.0,
+      "qpu_delay_time_per_sample": 60.57,
+      "total_post_processing_time": 1.0,
+      "post_processing_overhead_time": 1.0
+    },
+    "problem_id": "952bfcb7-6787-4667-a22d-6148f30c7f6c",
+    "embedding_context": {
+      "embedding": {
+        "1": [
+          187
+        ],
+        "0": [
+          175
+        ],
+        "12": [
+          3876
+        ],
+        "13": [
+          3864
+        ],
+        "3": [
+          1254
+        ],
+        "2": [
+          1266
+        ],
+        "14": [
+          3690
+        ],
+        "15": [
+          3678
+        ],
+        "5": [
+          4034
+        ],
+        "4": [
+          4045
+        ],
+        "8": [
+          404
+        ],
+        "9": [
+          392
+        ],
+        "7": [
+          2145
+        ],
+        "6": [
+          2157
+        ],
+        "10": [
+          4318
+        ],
+        "11": [
+          4294,
+          2181
+        ],
+        "20": [
+          4082
+        ],
+        "21": [
+          4093
+        ],
+        "22": [
+          4307
+        ],
+        "23": [
+          2133
+        ],
+        "16": [
+          139
+        ],
+        "17": [
+          127
+        ],
+        "18": [
+          1314
+        ],
+        "19": [
+          1302
+        ]
+      },
+      "chain_break_method": "majority_vote",
+      "embedding_parameters": {},
+      "chain_strength": 1.8926835886292948
+    }
+  }
+}
