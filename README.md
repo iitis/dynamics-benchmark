@@ -6,7 +6,9 @@ This repository accompanies the paper *Solving quantum-inspired dynamics on quan
 
 A framework for benchmarking different approaches to solving quantum dynamics problems, with a focus on comparing quantum annealing and classical methods.
 
+This work was supported by:
 
+The National Science Center (NCN), Poland, under Project No. 2020/38/E/ST3/00269 (F.H, B.G)
 
 ## Overview
 
