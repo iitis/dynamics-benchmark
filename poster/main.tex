@@ -1,0 +1,75 @@
+	\documentclass[final]{beamer}
+
+% Load beamerposter for vertical A0 sizing
+\usepackage[size=a0,orientation=portrait,scale=1.4]{beamerposter}
+\usetheme{IITiSPoster} % Loads your .sty file
+
+% Metadata
+\title{Quantum-inspired dynamical models on quantum and classical annealers}
+\author{Philipp Hanussek, Jakub Pawłowski, Zakaria Mzaouali, Bartłomiej Gardas}
+\institute{Institute of Theoretical and Applied Informatics (IITiS PAN)}
+\date{May 2026}
+
+\begin{document}
+\begin{frame}[t]
+\begin{columns}[t]
+
+% LEFT COLUMN
+\begin{column}{.48\paperwidth}
+
+  \begin{block}{Introduction}
+We propose a practical, physics-inspired benchmarking suite to challenge both quantum and classical computers by mapping real-time quantum dynamics to a common optimization format.
+    \begin{itemize}
+        \item Professional font theme enabled.
+        \item TikZ-generated logo in the header.
+        \item Clean vertical flow.
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Quantum Annealing}
+Initialize in the ground state of simple driver Hamiltonian:
+\begin{equation*}
+\ket{+}^{\otimes N} = \frac{1}{\sqrt{2^N}} \sum_{x \in \{0,1\}^N} \ket{x}
+\end{equation*}
+with $N$ being the number of qubits.
+The goal is to find the ground state of a problem Hamiltonian
+\begin{equation*}
+H_P = \sum_{i=1}^{N} h_i \widehat\sigma_z^{(i)} + \sum_{i<j} J_{ij} \widehat \sigma_z^{(i)} \widehat \sigma_z^{(j)},
+\end{equation*}
+During the annealing process, the system evolves under a time-dependent Hamiltonian 
+\begin{equation*}
+    H_\text{Ising}=\frac{A(s)}{2}H_D+\frac{B(s)}{2}H_P,
+\end{equation*}
+\begin{figure}
+\subfloat[\label{anneal_schedule}]{\includegraphics[width=0.33\linewidth]{figures/anneal_schedule_plot.pdf}}%
+    \subfloat[\label{pegasus}]{\includegraphics[width=0.33\linewidth]{figures/pegasus.pdf}}%
+    \subfloat[\label{zephyr}]{\includegraphics[width=0.33\linewidth]{figures/zephyr.pdf}}
+    
+\caption{(a) Time-dependent energy scales executed by the D-Wave quantum annealer. (b) Native connectivity map for the Pegasus architecture (D-Wave Advantage). (c) Connectivity map for the newer Zephyr architecture (D-Wave Advantage2).}
+\end{figure}
+
+
+\end{block}
+
+\end{column}
+
+% RIGHT COLUMN
+\begin{column}{.48\paperwidth}
+
+  \begin{block}{Methodology}
+    \begin{enumerate}
+        \item Data Collection.
+        \item Signal Processing.
+        \item Result Verification.
+    \end{enumerate}
+  \end{block}
+
+  \begin{block}{Conclusion}
+    The footer automatically includes the website and institution name as requested in your footline command.
+  \end{block}
+
+\end{column}
+
+\end{columns}
+\end{frame}
+\end{document}
