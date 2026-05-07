@@ -5,6 +5,8 @@
 \usepackage{braket}
 \usepackage{subfig}
 \usepackage{wrapfig} % in preamble
+\usepackage{svg}
+
 % Colors
 \definecolor{iitis-gray}{RGB}{131,130,128}
 \definecolor{iitis-orange}{RGB}{230,120,23}
@@ -27,60 +29,60 @@
 % TikZ Logo Definition
 \def\e{0.2}
 \newcommand{\iitislogo}[1]{%
-  \begin{tikzpicture}[scale=#1]%
-    \fill[color=iitis-gray] (2,0) rectangle (3,1);%
-    \fill[color=iitis-gray] (2,4) rectangle (3,5);%
-    \fill[color=iitis-gray] ({0-2*\e},2) rectangle ({1-2*\e},3);%
-    \fill[color=iitis-orange] ({1-\e},2) rectangle ({2-\e},3);%
-    \fill[color=iitis-orange] (2,2) rectangle (3,3);%
-    \fill[color=iitis-orange] (4,2) rectangle (5,3);%
-    \fill[color=iitis-orange] (3,3) rectangle (4,4);%
-    \fill[color=iitis-orange] (3,1) rectangle (4,2);%
-  \end{tikzpicture}%
+	\begin{tikzpicture}[scale=#1]%
+		\fill[color=iitis-gray] (2,0) rectangle (3,1);%
+		\fill[color=iitis-gray] (2,4) rectangle (3,5);%
+		\fill[color=iitis-gray] ({0-2*\e},2) rectangle ({1-2*\e},3);%
+		\fill[color=iitis-orange] ({1-\e},2) rectangle ({2-\e},3);%
+		\fill[color=iitis-orange] (2,2) rectangle (3,3);%
+		\fill[color=iitis-orange] (4,2) rectangle (5,3);%
+		\fill[color=iitis-orange] (3,3) rectangle (4,4);%
+		\fill[color=iitis-orange] (3,1) rectangle (4,2);%
+	\end{tikzpicture}%
 }
 
 % Header Template
-\setbeamertemplate{headline}{  
-  \leavevmode
-  \begin{beamercolorbox}[wd=\paperwidth]{headline}
-    \begin{columns}[T]
-      \begin{column}{.15\paperwidth}
-        \centering
-        \vspace{2cm}
-        \iitislogo{1.5}
-      \end{column}
-      \begin{column}{.7\paperwidth}
-        \vskip4ex
-        \raggedright
-        \usebeamercolor{title in headline}{\color{fg}\textbf{\Huge{\inserttitle}}\\[1ex]}
-        \usebeamercolor{author in headline}{\color{fg}\Large{\insertauthor}\\[1ex]}
-        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}
-      \end{column}
-      \begin{column}{.15\paperwidth}
-      \end{column}
-    \end{columns}
-    \vspace{2ex}
-    \hrules % Custom line below header
-  \end{beamercolorbox}
+\setbeamertemplate{headline}{
+	\leavevmode
+	\begin{beamercolorbox}[wd=\paperwidth]{headline}
+		\begin{columns}[T]
+			\begin{column}{.15\paperwidth}
+				\centering
+				\vspace{2cm}
+				\iitislogo{1.5}
+			\end{column}
+			\begin{column}{.7\paperwidth}
+				\vskip4ex
+				\raggedright
+				\usebeamercolor{title in headline}{\color{fg}\textbf{\Huge{\inserttitle}}\\[1ex]}
+				\usebeamercolor{author in headline}{\color{fg}\Large{\insertauthor}\\[1ex]}
+				\usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}
+			\end{column}
+			\begin{column}{.15\paperwidth}
+			\end{column}
+		\end{columns}
+		\vspace{2ex}
+		\hrules % Custom line below header
+	\end{beamercolorbox}
 }
 
 % Block Template
 \setbeamertemplate{block begin}{
-  \vspace{1ex}
-  \begin{beamercolorbox}[sep=1ex,left,rounded=true,shadow=false]{block title}
-    \usebeamerfont*{block title}\insertblocktitle
-  \end{beamercolorbox}
-  \setbeamercolor{at}{fg=black,bg=white}
-  \begin{beamercolorbox}[sep=1ex,left,rounded=true]{block body}
-}
-\setbeamertemplate{block end}{\end{beamercolorbox}}
+	\vspace{1ex}
+	\begin{beamercolorbox}[sep=1ex,left,rounded=true,shadow=false]{block title}
+		\usebeamerfont*{block title}\insertblocktitle
+	\end{beamercolorbox}
+	\setbeamercolor{at}{fg=black,bg=white}
+	\begin{beamercolorbox}[sep=1ex,left,rounded=true]{block body}
+		}
+		\setbeamertemplate{block end}{\end{beamercolorbox}}
 
-% Footline
-\setbeamertemplate{footline}{
-  \begin{beamercolorbox}[wd=\paperwidth,ht=4ex,dp=2ex,leftskip=1cm,rightskip=1cm]{footline}
-    IITiS PAN \hfill www.iitis.pl \hfill \insertdate
-  \end{beamercolorbox}
-}
+%% Footline
+%\setbeamertemplate{footline}{
+%  \begin{beamercolorbox}[wd=\paperwidth,ht=4ex,dp=2ex,leftskip=1cm,rightskip=1cm]{footline}
+%    IITiS PAN \hfill www.iitis.pl \hfill \insertdate
+%  \end{beamercolorbox}
+%}
 
 \newcommand{\hrules}{\color{iitis-gray}\rule{\paperwidth}{2pt}}
 \setbeamertemplate{navigation symbols}{}

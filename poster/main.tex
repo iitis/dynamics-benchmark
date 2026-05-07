@@ -4,6 +4,7 @@
 \usepackage[size=a0,orientation=portrait,scale=1.4]{beamerposter}
 \usetheme{IITiSPoster} % Loads your .sty file
 
+\usepackage[utf8]{inputenc}
 % Metadata
 \title{Quantum-inspired dynamical models on quantum and classical annealers}
 
@@ -16,12 +17,11 @@
 }
 
 \institute{
-	$^1$ Polish Academy of Sciences, Gliwice, Poland \\
-	$^2$ Sorbonne Université, Paris, France \\
-	$^3$ Wrocław University of Science and Technology, Wrocław, Poland \\
-	$^4$ Quantumz.io, Warsaw, Poland \\
-	$^5$ Jülich Supercomputing Centre, Germany \\
-	$^6$ Universität Tübingen, Germany
+	\begin{tabular}{ll}
+		$^1$ IITiS, Polish Academy of Sciences, Gliwice, Poland      & $^2$ Sorbonne Université, Paris, France           \\
+		$^3$ Wrocław University of Science and Technology      & $^4$ Quantumz.io, Sp. z o. o., Warsaw, Poland                  \\
+		$^5$ Jülich Supercomputing Centre, Germany             & $^6$ Universität Tübingen, Germany
+	\end{tabular}
 }
 \date{May 2026}
 \begin{document}
@@ -31,8 +31,8 @@
 		% LEFT COLUMN
 		\begin{column}{.48\paperwidth}
 
-			\begin{block}{Introduction}
-				\textbf{We propose a practical, physics-inspired benchmarking suite to challenge both quantum and classical computers by mapping real-time quantum dynamics to a common optimization format.}
+			\begin{block}{Introduction\phantom{p}}
+				\textbf{We propose a practical, physics-inspired benchmarking suite to challenge both quantum and classical computers by mapping real-time quantum dynamics to a common optimization format.\cite{rrf3-jm5m}}
 				\newline
 
 				\centering
@@ -65,7 +65,7 @@
 				\end{minipage}
 
 			\end{block}
-
+			\kern 16pt
 			\begin{block}{Methods}
 
 				\textbf{Quantum Annealing}
@@ -102,53 +102,92 @@
 				\vspace{0.5em}
 
 				\textbf{VeloxQ}
+				\begin{itemize}
+					\item Physics-inspired QUBO (quadratic unconstrained binary optimization) solver
+				\end{itemize}
 
-				VeloxQ is a fast and efficient, physics-inspired solver based on the theory of dynamical systems, designed for solving QUBO problems.
 
+				\vspace{0.5em}
+
+
+				
+				\begin{minipage}{0.4\linewidth}
+									\textbf{Cyclic Annealing}~\cite{cyclicannealing2024,cyclicannealing2022}
+					\begin{itemize}
+						\item soften the landscape around a candidate solution and re-freeze it
+						\item reuse promising configuration for next cycle
+					\end{itemize}
+				\end{minipage}
+				\hfill
+				\begin{minipage}{0.5\linewidth}
+					\centering
+					\includegraphics[width=\linewidth]{figures/cyclic_annealing_schedule.pdf}
+				\end{minipage}
 			\end{block}
+				\small
+				\textbf{Bibliography}
+			\bibliographystyle{ieeetr}
+			\bibliography{bib}
 		\end{column}
 
 
 		% RIGHT COLUMN
 		\begin{column}{.48\paperwidth}
 			\begin{block}{Problem Description}
-				\begin{itemize}
-					\item Quantum State Evolution
+\begin{itemize}
+	
+	\item Quantum State Evolution:
+	$
+	\ket{\Psi} = \sum_{n=0}^{N-1} \ket{t_n} \otimes \ket{\psi(t_n)}.
+	$
+	
+	\item Annihilated by Hermitian clock operator\cite{jalowiecki2020parallel}
+	
+	\begin{minipage}{0.62\linewidth}
+		
+		\begin{equation*}
+			\begin{aligned}
+				\mathcal{C} = \sum_{n=0}^{N-2} \Big(
+				& \ket{t_{n+1}}\bra{t_{n+1}} \otimes I \\
+				& - \ket{t_{n+1}}\bra{t_n} \otimes U_n + \text{h.c.}
+				\Big)
+			\end{aligned}
+		\end{equation*}
+		
+		\vspace{0.8em}
+		
+		\begin{equation*}
+			\min f(\mathbf{x}) =
+			\frac{1}{2} \bra{\mathbf{x}} \mathcal{A} \ket{\mathbf{x}}
+			- \langle \mathbf{x} | \phi \rangle
+		\end{equation*}
+		\begin{equation*}
+			\mathcal{A} := \mathcal{C} + \ket{t_0}\bra{t_0} \otimes I
+		\end{equation*}
+		
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.35\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figures/3_clock.pdf}
+		
+		\vspace{0.3em}
+		Clock Hamiltonian $C$
+	\end{minipage}
+	
+\end{itemize}
 
-					      \begin{equation*}
-						      \ket{\Psi} = \sum_{n=0}^{N-1} \ket{t_n} \otimes \ket{\psi(t_n)}.
-					      \end{equation*}
-
-					\item Annihilated by Hermitian clock operator
-
-					      \begin{minipage}{0.58\linewidth}
-						      \begin{equation*}
-							      \begin{aligned}
-								      \mathcal{C} = \sum_{n=0}^{N-2} \Big(
-								       & \ket{t_{n+1}}\bra{t_{n+1}} \otimes I               \\
-								       & - \ket{t_{n+1}}\bra{t_n} \otimes U_n + \text{h.c.}
-								      \Big)
-							      \end{aligned}
-						      \end{equation*}
-					      \end{minipage}
-					      \hfill
-					      \begin{minipage}{0.38\linewidth}
-						      \centering
-						      \includegraphics[width=\linewidth]{figures/3_clock.pdf}
-						      Clock Hamiltonian $C$
-					      \end{minipage}
-					      \hfill
-					\item Finally minimize
-					      \begin{equation*}
-						      f(\mathbf{x}) = \frac{1}{2} \bra{\mathbf{x}} \mathcal{A} \ket{\mathbf{x}} - \bra{\mathbf{x}} \phi \rangle\text{ , with } \mathcal{A} := \mathcal{C} + \ket{t_0}\bra{t_0} \otimes I
-					      \end{equation*}
-				\end{itemize}
-				
 				\textbf{Solving process}
+				\begin{itemize}
+
+				\item Example System~1 - Single qubit $Y$-rotation
+					$H_{1}= \frac{\pi}{2}\,\sigma_{y},
+					\label{sys1}$
+								\end{itemize}
 				\begin{figure}
 					\centering
-					\subfloat[Example embedding on QPU\label{h1_pegasus}]{\includegraphics[width=0.3\linewidth]{figures/emb_system_2_pegasus.pdf}}%
-					\subfloat[Success rates for systems $\widehat H_2$ $\widehat H_3$ \label{proba_h2h3}]{\includegraphics[width=0.3\linewidth]{figures/system_1_ta.pdf}}%
+					\subfloat[Embedding on QPU\label{h1_pegasus}]{\includegraphics[width=0.3\linewidth]{figures/emb_system_2_pegasus.pdf}}%
+					\subfloat[Success rates \label{proba_h2h3}]{\includegraphics[width=0.3\linewidth]{figures/system_1_ta.pdf}}%
 					\subfloat[Expectation value $\langle\sigma_{z}\rangle$\label{sigmaz_1}]{\includegraphics[width=0.3\linewidth]{figures/dynamics_system_1_list.pdf}}
 				\end{figure}
 
@@ -157,17 +196,31 @@
 
 
 			\begin{block}{Results}
-				\begin{enumerate}
-					\item Data Collection.
-					\item Signal Processing.
-					\item Result Verification.
-				\end{enumerate}
-			\end{block}
 
-			\begin{block}{Conclusion}
-				The footer automatically includes the website and institution name as requested in your footline command.
-			\end{block}
+				\textbf{Time-to-epsilon on large instances}
 
+				\begin{center}
+					\begin{minipage}{0.7\linewidth}
+						\centering
+						\includegraphics[width=\linewidth]{figures/tte_large_instances.pdf}
+						\small $\mathrm{TT}\varepsilon$ scaling for VeloxQ and SA (GPU) on large QUBO instances ($N$ up to $10^5$, systems $H_1,H_2,H_6$). VeloxQ outperforms SA for most targets $\varepsilon\in\{1.0,2.0,3.5,5.0\}\%$.
+					\end{minipage}
+				\end{center}
+
+				\vspace{0.5em}
+
+				\textbf{System-resolved $\text{TTS}_{99}$ scaling}
+
+				\begin{figure}
+					\centering
+					\subfloat[$H_1$]{\includegraphics[width=0.45\linewidth]{figures/tta_overview_1.pdf}}%
+					\subfloat[$H_3$]{\includegraphics[width=0.45\linewidth]{figures/tta_overview_3.pdf}}
+					\caption{$\text{TTS}_{99}$ vs.\ $N$: exponential scaling $\propto\exp(N/\beta)$. GPU solvers dominate for $N\gtrsim 100$; missing points indicate zero success probability.}
+				\end{figure}
+
+			\end{block}				\small
+			\textbf{Acknowledgements}				J\"ulich Supercomputing Centre for computing time on the D-Wave Advantage™ System JUPSI through J\"ulich UNified Infrastructure for Quantum computing (JUNIQ). P.H. and B.G.: funding from the National Science Centre (NCN), Poland: Sonata Bis 10, No. 2020/38/E/ST3/00269. Z.M.: funding from the Ministry of Economic Affairs Baden-Württemberg, Competence Center Quantum Computing Baden-Württemberg (project ``KQCBW25'').
+		\includesvg{figures/qr-code.svg}
 
 		\end{column}
 
